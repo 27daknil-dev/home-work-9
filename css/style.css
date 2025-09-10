@@ -4,6 +4,10 @@
     --navigation-link-color: #000000;
     --color-main: #727272;
     --color-white: #FFFFFF;
+    --color-shadow: #00c6a0;
+
+    --container-padding-x: 10px;
+    --transition-duration: 0.2s;
 }
 
 body {
@@ -20,6 +24,11 @@ h6 {
     font-weight: 500;
 }
 
+a:hover {
+    transition-duration: var(--transition-duration);
+    font-weight: 500;
+}
+
 .container {
     padding: 0 calc(50vw - 555px);
 }
@@ -33,14 +42,11 @@ h6 {
 }
 
 .navigation__list {
+    display: flex;
+    column-gap: 46px;
     list-style-type: none;
     padding: 0;
     margin: 0;
-}
-
-.navigation__item {
-    display: inline-block;
-    margin-right: 46px;
 }
 
 .navigation__link {
@@ -48,6 +54,11 @@ h6 {
     text-transform: uppercase;
     color: var(--navigation-link-color);
     letter-spacing: 0.1em;
+}
+
+.navigation__link:hover {
+    color: var(--accent-color);
+    text-shadow: 0 0 5px var(--color-shadow);
 }
 
 .navigation__link--active {
@@ -87,10 +98,16 @@ h6 {
     align-items: center;
 }
 
+.section-herro__link:hover {
+    background-color: var(--color-shadow);
+    color: var(--accent-color);
+    cursor: auto;
+}
+
 .wrapper {
     text-align: center;
+    padding: 0 calc(50vw - 270px);
     max-width: 540px;
-    padding-left: 690px;
 }
 
 .section-about__title {
@@ -146,27 +163,27 @@ h6 {
 .section-process__description {
     color: var(--color-main);
     margin-bottom: 57px;
+    max-width: 540px;
 }
 
-.video {
-    background-image: url("../images/rectangle-5.jpg");
-    width: 1100px;
-    height: 600px;
-    margin-left: 405px;
+.section-process__video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 57px;
     margin-bottom: 100px;
+    max-width: 1100px;
+    min-height: 600px;
+    background-image: url("../images/rectangle-5.jpg");
 }
 
 .play-button {
-    margin-top: 250px;
-    margin-left: 505px;
-    width: 100px;
-    height: 100px;
+    max-width: 100px;
+    max-height: 100px;
 }
 
 .footer {
     background-color: var(--accent-color);
-    padding-left: 406px;
     color: var(--color-white);
     padding-top: 50px;
     padding-bottom: 50px;
